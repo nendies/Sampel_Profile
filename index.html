@@ -53,6 +53,10 @@
             border-bottom-color: white;
         }
 
+        .navbar container {
+            position: sticky;
+        }
+
         .container {
             padding:0;
         }
@@ -124,6 +128,7 @@
 </head>
     <body>
         
+        
         <div class="topnav">
             <div class="row">
                 <div class="col-md-6" style="padding-left:100px;">
@@ -141,7 +146,7 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar ">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -169,11 +174,12 @@
                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                         <li><a href="#"><i class="fa fa-reddit"></i></a></li>
                     </ul>
-
                 </div>
                 <!--/.nav-collapse -->
             </div>
         </nav>
+       
+        
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -218,7 +224,7 @@
                 <div class="col-md-4">
                     <div class="well">
                         <a href="#">
-                            <img src="icon-indonesia.png" alt="">
+                            <img src="icon-indonesia.png" class="rotasi-in">
                             <h4>Indonesia</h4>
                         </a>
                     </div>
@@ -232,30 +238,30 @@
                 <div class="col-md-4">
                     <div class="well">
                         <a href="#">
-                            <img src="icon-philipines.png" alt="">
+                            <img src="icon-philipines.png" class="rotasi-ph">
                             <h4>Philipines</h4>
                         </a>
                     </div>
                     <div class="text-article">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi similique minus nulla doloribus facilis ipsa exercitationem voluptates consequatur, nisi commodi doloremque placeat quam facere cupiditate quasi, sunt cum porro quae!
-                            </p>
-                            <button type="button" class="btn btn-info">Read More</button>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi similique minus nulla doloribus facilis ipsa exercitationem voluptates consequatur, nisi commodi doloremque placeat quam facere cupiditate quasi, sunt cum porro quae!
+                        </p>
+                        <button type="button" class="btn btn-info">Read More</button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                        <div class="well">
-                            <a href="#">
-                                <img src="icon-vietnam.png" alt="">
-                                <h4>Vietnam</h4>
-                            </a>
-                        </div>
-                        <div class="text-article">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi similique minus nulla doloribus facilis ipsa exercitationem voluptates consequatur, nisi commodi doloremque placeat quam facere cupiditate quasi, sunt cum porro quae!
-                                </p>
-                                <button type="button" class="btn btn-info">Read More</button>
-                        </div>
+                    <div class="well">
+                        <a href="#">
+                            <img src="icon-vietnam.png" class="rotasi-vi">
+                            <h4>Vietnam</h4>
+                        </a>
+                    </div>
+                    <div class="text-article">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi similique minus nulla doloribus facilis ipsa exercitationem voluptates consequatur, nisi commodi doloremque placeat quam facere cupiditate quasi, sunt cum porro quae!
+                        </p>
+                        <button type="button" class="btn btn-info">Read More</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -343,14 +349,9 @@
             </div>
         </div>
 
-    <div class="test">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni delectus consequatur recusandae dolorem ad beatae numquam ea nulla, itaque doloribus totam quae dolor at nostrum autem commodi? Quia, reprehenderit non?</p>
-    </div>
-
-
         <div class="backtotop">
-            <a href="mywebsite.html">
-            <img src="https://static1.squarespace.com/static/5192c089e4b0f2c91b01057c/t/569e7a755827c3ae18f89e0b/1453226613946/Back+To+Top.png" alt="">
+            <a href="index.html">
+            <img src="backtotop.png" class="rotasi-in">
             </a>
         </div>
             </div>
@@ -362,6 +363,50 @@
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <script>
+            $('.perbesar').hover(function(){
+                $('.perbesar').css('height', '500px');
+            },
+                function () {
+                    $('.perbesar').css('height', '300px');
+                    $('.perbesar').css('transition', 'height 3s');
+
+                } 
+            )
+
+            $('.rotasi-in').hover(function(){
+                $('.rotasi-in').css('transform', 'rotate(180deg)');
+                $('.rotasi-in').css('transition', 'transform 3s');
+            },
+                function () {
+                    $('.rotasi-in').css('transform', 'rotate(0deg)');
+                    $('.rotasi-in').css('transition', 'transform 3s');
+                } 
+            )
+
+            $('.rotasi-ph').hover(function(){
+                $('.rotasi-ph').css('transform', 'rotate(180deg)');
+                $('.rotasi-ph').css('transition', 'transform 3s');
+            },
+                function () {
+                    $('.rotasi-ph').css('transform', 'rotate(0deg)');
+                    $('.rotasi-ph').css('transition', 'transform 3s');
+                } 
+            )
+
+            $('.rotasi-vi').hover(function(){
+                $('.rotasi-vi').css('transform', 'rotate(180deg)');
+                $('.rotasi-vi').css('transition', 'transform 3s');
+            },
+                function () {
+                    $('.rotasi-vi').css('transform', 'rotate(0deg)');
+                    $('.rotasi-vi').css('transition', 'transform 3s');
+                } 
+            )
+        </script>
 
     </body>
 </html>
