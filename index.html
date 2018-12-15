@@ -39,6 +39,7 @@
             height: 50px;
         }
 
+
         body {
             font-family: 'Abel', serif;
             font-size: 16px;
@@ -131,10 +132,15 @@
         
         <div class="topnav">
             <div class="row">
-                <div class="col-md-6" style="padding-left:100px;">
+                <div class="col-md-4" style="padding-left:100px;">
                     <img src="logo.png" alt="">
                 </div>
-                <div class="col-md-6" >
+
+                <div class="col-md-4" style="padding-top:20px;">
+                    <span id="typed" style="color:red;"></span>
+                </div>
+                
+                <div class="col-md-4" >
                     <form class="navbar-form navbar-right">
                             <div class="form-group">
                                 <a href="#"><span class="glyphicon glyphicon-phone-alt"> 021-8971171  </span></a>
@@ -271,7 +277,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="well">
-                        <a href="#">
+                        <a data-fancybox = "gallery" href="automotive.jpg">
                             <img src="automotive.png" alt="">
                             <h4>Automotive</h4>
                         </a>
@@ -286,7 +292,7 @@
 
                 <div class="col-md-3">
                     <div class="well">
-                        <a href="#">
+                        <a data-fancybox="gallery" href="electronic.jpg">
                             <img src="electronic.png" alt="">
                             <h4>Electronic</h4>
                         </a>
@@ -301,7 +307,7 @@
 
                 <div class="col-md-3">
                     <div class="well">
-                        <a href="#">
+                        <a data-fancybox="gallery" href="consumer.jpg">
                             <img src="consumer.png" alt="">
                             <h4>Consumer Industrial</h4>
                         </a>
@@ -316,7 +322,7 @@
 
                 <div class="col-md-3">
                     <div class="well">
-                        <a href="#">
+                        <a data-fancybox="gallery" href="epp.jpg">
                             <img src="epp.png" alt="">
                             <h4>EPP</h4>
                         </a>
@@ -356,6 +362,18 @@
         </div>
             </div>
         <!-- </div> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+        <script>
+            var typed = new Typed("#typed", {
+                strings: ["For Spesial Order, Contact Me Please !"," Telp : 021-8971171, Fax : 89711768", "HP : 08111 1500 145", "email : mkt1@pt-armstrong.co.id"],
+                typeSpeed:20,
+                loop:true
+            }  );
+        </script>
+
+
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     
@@ -406,6 +424,10 @@
                     $('.rotasi-vi').css('transition', 'transform 3s');
                 } 
             )
+
+           
+            
+            
         </script>
 
     </body>
